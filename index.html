@@ -1,0 +1,420 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/tabler-icons.min.css">
+
+<style>
+#cehsDir *, #cehsDir *::before, #cehsDir *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+#cehsDir {
+  --scarlet:    #D00000;
+  --scarlet-dk: #A80000;
+  --scarlet-lt: #fdf0f0;
+  --cream:      #F5F0E8;
+  --cream-dk:   #E8E0D0;
+  --ink:        #1a1a1a;
+  --ink2:       #444444;
+  --ink3:       #777777;
+  --ink4:       #aaaaaa;
+  --surface:    #ffffff;
+  --bg:         #f9f8f6;
+  --border:     rgba(0,0,0,0.09);
+  --border2:    rgba(0,0,0,0.15);
+  --radius:     6px;
+  --live:       #1a8a5a;
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg);
+  padding: 0 0 4rem;
+}
+
+/* ── MASTHEAD ── */
+#cehsDir .masthead {
+  background: var(--scarlet);
+  border-bottom: 4px solid var(--scarlet-dk);
+  padding: 0 2rem;
+  margin-bottom: 0;
+}
+#cehsDir .masthead-inner {
+  max-width: 1020px; margin: 0 auto;
+  display: flex; align-items: center; gap: 16px; height: 52px;
+}
+#cehsDir .masthead-n {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 30px; font-weight: 600; color: #fff;
+  border: 2px solid rgba(255,255,255,0.6);
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+#cehsDir .masthead-text {
+  font-size: 12px; font-weight: 500;
+  color: rgba(255,255,255,0.88); letter-spacing: 0.04em; text-transform: uppercase;
+}
+#cehsDir .masthead-divider {
+  width: 1px; height: 20px; background: rgba(255,255,255,0.35); flex-shrink: 0;
+}
+#cehsDir .masthead-college { font-size: 12px; color: rgba(255,255,255,0.72); }
+
+/* ── INNER CONTENT ── */
+#cehsDir .inner { max-width: 1020px; margin: 0 auto; padding: 0 2rem; }
+
+/* ── HERO ── */
+#cehsDir .hero {
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--border2);
+  margin-bottom: 2rem;
+}
+#cehsDir .hero-eyebrow {
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--scarlet); margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+#cehsDir .hero-eyebrow::before {
+  content: ""; display: inline-block;
+  width: 20px; height: 2px; background: var(--scarlet);
+}
+#cehsDir .hero-title {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 48px; font-weight: 600; color: var(--ink);
+  line-height: 1.1; letter-spacing: -0.5px; margin-bottom: 12px;
+}
+#cehsDir .hero-sub {
+  font-size: 15px; color: var(--ink3); font-weight: 300;
+  max-width: 560px; line-height: 1.6;
+}
+#cehsDir .hero-stats {
+  display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;
+}
+#cehsDir .stat { display: flex; flex-direction: column; gap: 1px; }
+#cehsDir .stat-num {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 28px; font-weight: 600; color: var(--ink); line-height: 1;
+}
+#cehsDir .stat-lbl {
+  font-size: 11px; font-weight: 500; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--ink4);
+}
+#cehsDir .stat-sep {
+  width: 1px; background: var(--border2); align-self: stretch; margin: 4px 0;
+}
+
+/* ── TOOLBAR ── */
+#cehsDir .toolbar {
+  display: flex; gap: 10px; margin-bottom: 1.25rem; flex-wrap: wrap; align-items: center;
+}
+#cehsDir .search-wrap { position: relative; flex: 1; min-width: 200px; }
+#cehsDir .search-wrap i {
+  position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
+  font-size: 16px; color: var(--ink4); pointer-events: none;
+}
+#cehsDir .search-wrap input {
+  width: 100%; padding: 10px 12px 10px 36px;
+  border: 1px solid var(--border2); border-radius: var(--radius);
+  background: var(--surface); color: var(--ink); font-size: 14px;
+  font-family: inherit; outline: none; transition: border-color .15s, box-shadow .15s;
+}
+#cehsDir .search-wrap input:focus {
+  border-color: var(--scarlet); box-shadow: 0 0 0 3px rgba(208,0,0,0.08);
+}
+#cehsDir .search-wrap input::placeholder { color: var(--ink4); }
+#cehsDir select {
+  padding: 10px 12px; border: 1px solid var(--border2); border-radius: var(--radius);
+  background: var(--surface); color: var(--ink); font-size: 13px;
+  font-family: inherit; outline: none; cursor: pointer; transition: border-color .15s;
+}
+#cehsDir select:focus { border-color: var(--scarlet); }
+#cehsDir .result-count { font-size: 12px; color: var(--ink4); margin-left: auto; white-space: nowrap; }
+
+/* ── CHIPS ── */
+#cehsDir .chips { display: flex; gap: 6px; margin-bottom: 2rem; flex-wrap: wrap; }
+#cehsDir .chip {
+  font-size: 12px; font-weight: 500; padding: 5px 14px; border-radius: 100px;
+  border: 1px solid var(--border2); cursor: pointer; color: var(--ink3);
+  background: var(--surface); transition: all .12s; user-select: none;
+  display: flex; align-items: center; gap: 5px;
+}
+#cehsDir .chip:hover { border-color: var(--scarlet); color: var(--scarlet); }
+#cehsDir .chip.active { background: var(--scarlet); color: #fff; border-color: var(--scarlet); }
+#cehsDir .chip-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+/* ── SECTION ── */
+#cehsDir .section { margin-bottom: 2.5rem; }
+#cehsDir .sec-head {
+  display: flex; align-items: center; gap: 10px;
+  padding-bottom: 10px; margin-bottom: 2px;
+  border-bottom: 2px solid var(--cream-dk);
+}
+#cehsDir .sec-bar { width: 3px; border-radius: 2px; height: 18px; flex-shrink: 0; }
+#cehsDir .sec-label {
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.09em; color: var(--ink2);
+}
+#cehsDir .sec-count {
+  font-size: 11px; color: var(--ink4); margin-left: auto;
+  background: var(--bg); padding: 2px 8px; border-radius: 100px;
+  border: 1px solid var(--border);
+}
+
+/* ── REPORT ROW ── */
+#cehsDir .report-row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 12px 10px; border-bottom: 1px solid var(--border);
+  transition: background .1s; border-radius: 4px; cursor: pointer;
+}
+#cehsDir .report-row:last-child { border-bottom: none; }
+#cehsDir .report-row:hover { background: var(--cream); }
+#cehsDir .report-row:hover .ext-icon { opacity: 0.5; }
+#cehsDir .row-left {
+  width: 28px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+#cehsDir .row-cat-dot { width: 8px; height: 8px; border-radius: 50%; }
+#cehsDir .row-main { flex: 1; min-width: 0; }
+#cehsDir .row-link {
+  font-size: 14px; font-weight: 500; color: var(--ink);
+  text-decoration: none; display: inline-flex; align-items: center; gap: 5px;
+}
+#cehsDir .row-link:hover { color: var(--scarlet); }
+#cehsDir .ext-icon { font-size: 12px; opacity: 0; transition: opacity .12s; flex-shrink: 0; }
+#cehsDir .row-meta { font-size: 11px; color: var(--ink4); margin-top: 2px; }
+#cehsDir .row-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+/* ── BADGES ── */
+#cehsDir .badge {
+  font-size: 11px; padding: 3px 9px; border-radius: 100px;
+  font-weight: 500; white-space: nowrap; display: inline-flex; align-items: center; gap: 3px;
+}
+#cehsDir .badge-fmt  { background: #e8eef8; color: #1a3d80; border: 1px solid #c5d4ef; }
+#cehsDir .badge-new  { background: var(--scarlet-lt); color: var(--scarlet-dk); border: 1px solid #f5c0c0; }
+
+/* ── UPDATED / LIVE ── */
+#cehsDir .updated { font-size: 11px; color: var(--ink4); min-width: 86px; text-align: right; }
+#cehsDir .live-wrap {
+  display: flex; align-items: center; gap: 5px;
+  justify-content: flex-end; color: var(--live); font-weight: 500;
+}
+#cehsDir .live-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--live); flex-shrink: 0;
+  animation: cehsPulse 2.4s infinite;
+}
+@keyframes cehsPulse { 0%,100%{opacity:1} 50%{opacity:.25} }
+
+/* ── EMPTY ── */
+#cehsDir .empty { text-align: center; padding: 4rem 1rem; color: var(--ink4); }
+#cehsDir .empty i { font-size: 36px; display: block; margin-bottom: 10px; }
+#cehsDir .empty p { font-size: 14px; }
+
+/* ── FOOTER ── */
+#cehsDir .footer {
+  border-top: 1px solid var(--border2); padding-top: 1.5rem; margin-top: 3rem;
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+}
+#cehsDir .footer-left { font-size: 12px; color: var(--ink4); line-height: 1.8; }
+#cehsDir .footer-left a { color: var(--scarlet); text-decoration: none; }
+#cehsDir .footer-left a:hover { text-decoration: underline; }
+#cehsDir .footer-n {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 22px; font-weight: 600; color: var(--ink4);
+  border: 1.5px solid var(--border2); width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center; border-radius: 2px;
+}
+</style>
+
+<div id="cehsDir">
+
+  <div class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-n">N</div>
+      <div class="masthead-text">University of Nebraska–Lincoln</div>
+      <div class="masthead-divider"></div>
+      <div class="masthead-college">College of Education &amp; Human Sciences</div>
+    </div>
+  </div>
+
+  <div class="inner">
+
+    <div class="hero">
+      <div class="hero-eyebrow">CEHS Reporting &amp; Analytics</div>
+      <div class="hero-title">Report Directory</div>
+      <div class="hero-sub">
+        A centralized index of college-wide reports spanning academic, financial,
+        operational, and compliance functions — all within the Microsoft environment.
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" id="cd-statTotal">—</span>
+          <span class="stat-lbl">Active reports</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num" id="cd-statLive">—</span>
+          <span class="stat-lbl">Live / real-time</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-lbl">Categories</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num" id="cd-statNew">—</span>
+          <span class="stat-lbl">New this cycle</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="search-wrap">
+        <i class="ti ti-search"></i>
+        <input type="text" id="cd-search" placeholder="Search reports, owners, departments…">
+      </div>
+      <select id="cd-freq">
+        <option value="">All frequencies</option>
+        <option>Daily</option><option>Weekly</option><option>Monthly</option>
+        <option>Quarterly</option><option>Semester</option><option>Annual</option><option>On-demand</option>
+      </select>
+      <select id="cd-fmt">
+        <option value="">All formats</option>
+        <option>Power BI</option><option>Excel</option><option>Teams</option><option>SharePoint</option>
+      </select>
+      <span class="result-count" id="cd-count"></span>
+    </div>
+
+    <div class="chips" id="cd-chips">
+      <div class="chip active" data-cat="All">All reports</div>
+      <div class="chip" data-cat="Finance"><span class="chip-dot" style="background:#1a56a4"></span>Finance</div>
+      <div class="chip" data-cat="Academic"><span class="chip-dot" style="background:#2d7a2d"></span>Academic</div>
+      <div class="chip" data-cat="Operations"><span class="chip-dot" style="background:#a05c00"></span>Operations</div>
+      <div class="chip" data-cat="HR"><span class="chip-dot" style="background:#8b2060"></span>HR &amp; Payroll</div>
+      <div class="chip" data-cat="Compliance"><span class="chip-dot" style="background:#5a3d9e"></span>Compliance</div>
+    </div>
+
+    <div id="cd-list"></div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <strong>CEHS Reporting &amp; Analytics</strong><br>
+        To add or update a report, contact <a href="mailto:mkond2@unl.edu">mkond2@unl.edu</a>
+      </div>
+      <div class="footer-n">N</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function() {
+
+const REPORTS = [
+  { name:"Budget vs. Actuals Summary",   cat:"Finance",    owner:"Finance Office",         freq:"Monthly",   fmt:"Power BI",   link:"#", lastUpdated:"2026-05-01", isLive:true,  status:"Active", isNew:false },
+  { name:"Cash Flow Forecast",           cat:"Finance",    owner:"Finance Office",         freq:"Monthly",   fmt:"Excel",      link:"#", lastUpdated:"2026-05-28", isLive:false, status:"Active", isNew:false },
+  { name:"Grant Expenditures Report",    cat:"Finance",    owner:"Grants Office",          freq:"Monthly",   fmt:"Excel",      link:"#", lastUpdated:"2026-05-01", isLive:false, status:"Active", isNew:false },
+  { name:"Procurement & Vendor Spend",   cat:"Finance",    owner:"Purchasing",             freq:"Quarterly", fmt:"Power BI",   link:"#", lastUpdated:"2026-04-01", isLive:true,  status:"Active", isNew:false },
+  { name:"Enrollment Dashboard",         cat:"Academic",   owner:"Registrar",              freq:"Weekly",    fmt:"Power BI",   link:"#", lastUpdated:"2026-06-01", isLive:true,  status:"Active", isNew:true  },
+  { name:"Faculty Workload Report",      cat:"Academic",   owner:"Academic Affairs",       freq:"Quarterly", fmt:"Excel",      link:"#", lastUpdated:"2026-04-01", isLive:false, status:"Active", isNew:false },
+  { name:"Student Success Metrics",      cat:"Academic",   owner:"Institutional Research", freq:"Quarterly", fmt:"Power BI",   link:"#", lastUpdated:"2026-03-15", isLive:true,  status:"Active", isNew:true  },
+  { name:"Dual Enrollment Report",       cat:"Academic",   owner:"K-12 Partnerships",      freq:"Quarterly", fmt:"Power BI",   link:"#", lastUpdated:"2026-04-15", isLive:false, status:"Active", isNew:false },
+  { name:"Course Completion Rates",      cat:"Academic",   owner:"Institutional Research", freq:"Semester",  fmt:"SharePoint", link:"#", lastUpdated:"2026-01-10", isLive:false, status:"Active", isNew:false },
+  { name:"Facilities Work Orders",       cat:"Operations", owner:"Facilities Mgmt.",       freq:"Weekly",    fmt:"Teams",      link:"#", lastUpdated:"2026-06-01", isLive:true,  status:"Active", isNew:false },
+  { name:"IT Help Desk Metrics",         cat:"Operations", owner:"IT Services",            freq:"Monthly",   fmt:"Teams",      link:"#", lastUpdated:"2026-05-31", isLive:true,  status:"Active", isNew:false },
+  { name:"Payroll Summary by Dept.",     cat:"HR",         owner:"Human Resources",        freq:"Monthly",   fmt:"Excel",      link:"#", lastUpdated:"2026-05-31", isLive:false, status:"Active", isNew:false },
+  { name:"Hiring Pipeline Tracker",      cat:"HR",         owner:"Human Resources",        freq:"On-demand", fmt:"Teams",      link:"#", lastUpdated:"2026-06-01", isLive:true,  status:"Active", isNew:true  },
+  { name:"Benefits Enrollment Status",   cat:"HR",         owner:"Human Resources",        freq:"Annual",    fmt:"SharePoint", link:"#", lastUpdated:"2026-01-15", isLive:false, status:"Active", isNew:false },
+  { name:"Title IX Compliance Log",      cat:"Compliance", owner:"Legal & Compliance",     freq:"Quarterly", fmt:"SharePoint", link:"#", lastUpdated:"2026-04-01", isLive:false, status:"Active", isNew:false },
+  { name:"IPEDS Reporting Data",         cat:"Compliance", owner:"Institutional Research", freq:"Annual",    fmt:"Excel",      link:"#", lastUpdated:"2025-12-01", isLive:false, status:"Active", isNew:false },
+  { name:"Accreditation Evidence Log",   cat:"Compliance", owner:"Academic Affairs",       freq:"Annual",    fmt:"SharePoint", link:"#", lastUpdated:"2026-03-01", isLive:false, status:"Active", isNew:false },
+];
+
+const CAT_ORDER  = ["Finance","Academic","Operations","HR","Compliance"];
+const CAT_LABELS = { Finance:"Finance", Academic:"Academic", Operations:"Operations", HR:"HR & Payroll", Compliance:"Compliance" };
+const CAT_COLOR  = { Finance:"#1a56a4", Academic:"#2d7a2d", Operations:"#a05c00", HR:"#8b2060", Compliance:"#5a3d9e" };
+
+let activeChip = "All";
+
+function fmtDate(s) {
+  if (!s) return "—";
+  const d = new Date(s + "T00:00:00");
+  return d.toLocaleDateString("en-US", { month:"short", day:"numeric", year:"numeric" });
+}
+
+function updatedHTML(r) {
+  if (r.isLive) return `<div class="live-wrap"><span class="live-dot"></span>Live</div>`;
+  return fmtDate(r.lastUpdated);
+}
+
+function render() {
+  const q    = document.getElementById("cd-search").value.toLowerCase();
+  const freq = document.getElementById("cd-freq").value;
+  const fmt  = document.getElementById("cd-fmt").value;
+
+  const active = REPORTS.filter(r => r.status === "Active");
+  const filtered = active.filter(r => {
+    const mc = activeChip === "All" || r.cat === activeChip;
+    const mq = !q || r.name.toLowerCase().includes(q) || r.owner.toLowerCase().includes(q);
+    const mf = !freq || r.freq === freq;
+    const mm = !fmt  || r.fmt  === fmt;
+    return mc && mq && mf && mm;
+  });
+
+  document.getElementById("cd-statTotal").textContent = active.length;
+  document.getElementById("cd-statLive").textContent  = active.filter(r => r.isLive).length;
+  document.getElementById("cd-statNew").textContent   = active.filter(r => r.isNew).length;
+  document.getElementById("cd-count").textContent     = filtered.length + " result" + (filtered.length !== 1 ? "s" : "");
+
+  const cats = activeChip === "All" ? CAT_ORDER : [activeChip];
+  let html = "";
+
+  cats.forEach(cat => {
+    const items = filtered.filter(r => r.cat === cat);
+    if (!items.length) return;
+    const color = CAT_COLOR[cat];
+    html += `<div class="section">
+      <div class="sec-head">
+        <div class="sec-bar" style="background:${color}"></div>
+        <span class="sec-label">${CAT_LABELS[cat]}</span>
+        <span class="sec-count">${items.length}</span>
+      </div>`;
+    items.forEach(r => {
+      html += `<div class="report-row" onclick="window.open('${r.link}','_blank')">
+        <div class="row-left"><div class="row-cat-dot" style="background:${color}"></div></div>
+        <div class="row-main">
+          <a href="${r.link}" class="row-link" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            ${r.name}<i class="ti ti-external-link ext-icon"></i>
+          </a>
+          <div class="row-meta">${r.owner}&ensp;·&ensp;${r.freq}</div>
+        </div>
+        <div class="row-right">
+          ${r.isNew ? '<span class="badge badge-new">New</span>' : ""}
+          <span class="badge badge-fmt"><i class="ti ti-brand-windows" style="font-size:10px"></i>${r.fmt}</span>
+          <div class="updated">${updatedHTML(r)}</div>
+        </div>
+      </div>`;
+    });
+    html += `</div>`;
+  });
+
+  if (!html) html = `<div class="empty"><i class="ti ti-file-off"></i><p>No reports match your search.</p></div>`;
+  document.getElementById("cd-list").innerHTML = html;
+}
+
+document.getElementById("cd-chips").addEventListener("click", e => {
+  const chip = e.target.closest(".chip");
+  if (!chip) return;
+  activeChip = chip.dataset.cat;
+  document.querySelectorAll("#cd-chips .chip").forEach(c =>
+    c.classList.toggle("active", c.dataset.cat === activeChip));
+  render();
+});
+
+document.getElementById("cd-search").addEventListener("input", render);
+document.getElementById("cd-freq").addEventListener("change", render);
+document.getElementById("cd-fmt").addEventListener("change", render);
+
+render();
+
+})();
+</script>
