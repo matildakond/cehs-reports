@@ -286,11 +286,11 @@
 
     <div class="chips" id="cd-chips">
       <div class="chip active" data-cat="All">All reports</div>
-      <div class="chip" data-cat="Finance"><span class="chip-dot" style="background:#1a56a4"></span>Finance</div>
       <div class="chip" data-cat="Academic"><span class="chip-dot" style="background:#2d7a2d"></span>Academic</div>
-      <div class="chip" data-cat="Operations"><span class="chip-dot" style="background:#a05c00"></span>Operations</div>
-      <div class="chip" data-cat="HR"><span class="chip-dot" style="background:#8b2060"></span>HR &amp; Payroll</div>
       <div class="chip" data-cat="Compliance"><span class="chip-dot" style="background:#5a3d9e"></span>Compliance</div>
+      <div class="chip" data-cat="Finance"><span class="chip-dot" style="background:#1a56a4"></span>Finance</div>
+      <div class="chip" data-cat="HR"><span class="chip-dot" style="background:#8b2060"></span>HR &amp; Payroll</div>
+      <div class="chip" data-cat="Operations"><span class="chip-dot" style="background:#a05c00"></span>Operations</div>
     </div>
 
     <div id="cd-list"></div>
@@ -310,26 +310,26 @@
 (function() {
 
 const REPORTS = [
-  { name:"Budget vs. Actuals Summary",   cat:"Finance",    owner:"Finance Office",         freq:"Monthly",   fmt:"Power BI",   link:"#", lastUpdated:"2026-05-01", isLive:true,  status:"Active", isNew:false },
-  { name:"Cash Flow Forecast",           cat:"Finance",    owner:"Finance Office",         freq:"Monthly",   fmt:"Excel",      link:"#", lastUpdated:"2026-05-28", isLive:false, status:"Active", isNew:false },
-  { name:"Grant Expenditures Report",    cat:"Finance",    owner:"Grants Office",          freq:"Monthly",   fmt:"Excel",      link:"#", lastUpdated:"2026-05-01", isLive:false, status:"Active", isNew:false },
-  { name:"Procurement & Vendor Spend",   cat:"Finance",    owner:"Purchasing",             freq:"Quarterly", fmt:"Power BI",   link:"#", lastUpdated:"2026-04-01", isLive:true,  status:"Active", isNew:false },
-  { name:"Enrollment Dashboard",         cat:"Academic",   owner:"Registrar",              freq:"Weekly",    fmt:"Power BI",   link:"#", lastUpdated:"2026-06-01", isLive:true,  status:"Active", isNew:true  },
-  { name:"Faculty Workload Report",      cat:"Academic",   owner:"Academic Affairs",       freq:"Quarterly", fmt:"Excel",      link:"#", lastUpdated:"2026-04-01", isLive:false, status:"Active", isNew:false },
-  { name:"Student Success Metrics",      cat:"Academic",   owner:"Institutional Research", freq:"Quarterly", fmt:"Power BI",   link:"#", lastUpdated:"2026-03-15", isLive:true,  status:"Active", isNew:true  },
-  { name:"Dual Enrollment Report",       cat:"Academic",   owner:"K-12 Partnerships",      freq:"Quarterly", fmt:"Power BI",   link:"#", lastUpdated:"2026-04-15", isLive:false, status:"Active", isNew:false },
-  { name:"Course Completion Rates",      cat:"Academic",   owner:"Institutional Research", freq:"Semester",  fmt:"SharePoint", link:"#", lastUpdated:"2026-01-10", isLive:false, status:"Active", isNew:false },
-  { name:"Facilities Work Orders",       cat:"Operations", owner:"Facilities Mgmt.",       freq:"Weekly",    fmt:"Teams",      link:"#", lastUpdated:"2026-06-01", isLive:true,  status:"Active", isNew:false },
-  { name:"IT Help Desk Metrics",         cat:"Operations", owner:"IT Services",            freq:"Monthly",   fmt:"Teams",      link:"#", lastUpdated:"2026-05-31", isLive:true,  status:"Active", isNew:false },
-  { name:"Payroll Summary by Dept.",     cat:"HR",         owner:"Human Resources",        freq:"Monthly",   fmt:"Excel",      link:"#", lastUpdated:"2026-05-31", isLive:false, status:"Active", isNew:false },
-  { name:"Hiring Pipeline Tracker",      cat:"HR",         owner:"Human Resources",        freq:"On-demand", fmt:"Teams",      link:"#", lastUpdated:"2026-06-01", isLive:true,  status:"Active", isNew:true  },
-  { name:"Benefits Enrollment Status",   cat:"HR",         owner:"Human Resources",        freq:"Annual",    fmt:"SharePoint", link:"#", lastUpdated:"2026-01-15", isLive:false, status:"Active", isNew:false },
-  { name:"Title IX Compliance Log",      cat:"Compliance", owner:"Legal & Compliance",     freq:"Quarterly", fmt:"SharePoint", link:"#", lastUpdated:"2026-04-01", isLive:false, status:"Active", isNew:false },
-  { name:"IPEDS Reporting Data",         cat:"Compliance", owner:"Institutional Research", freq:"Annual",    fmt:"Excel",      link:"#", lastUpdated:"2025-12-01", isLive:false, status:"Active", isNew:false },
-  { name:"Accreditation Evidence Log",   cat:"Compliance", owner:"Academic Affairs",       freq:"Annual",    fmt:"SharePoint", link:"#", lastUpdated:"2026-03-01", isLive:false, status:"Active", isNew:false },
+  { name:"Test Finance a",   cat:"Finance",    owner:"Finance Office",         freq:"Monthly",   fmt:"Power BI",   link:"#", lastUpdated:"2026-05-01", isLive:true,  status:"Active", isNew:false },
+  { name:"Test Finance b",           cat:"Finance",    owner:"Finance Office",         freq:"Monthly",   fmt:"Excel",      link:"#", lastUpdated:"2026-05-28", isLive:false, status:"Active", isNew:false },
+  { name:"Test Finance c",    cat:"Finance",    owner:"Grants Office",          freq:"Monthly",   fmt:"Excel",      link:"#", lastUpdated:"2026-05-01", isLive:false, status:"Active", isNew:false },
+  { name:"Test Finance d",   cat:"Finance",    owner:"Purchasing",             freq:"Quarterly", fmt:"Power BI",   link:"#", lastUpdated:"2026-04-01", isLive:true,  status:"Active", isNew:false },
+  { name:"Test  Academic a",         cat:"Academic",   owner:"Registrar",              freq:"Weekly",    fmt:"Power BI",   link:"#", lastUpdated:"2026-06-01", isLive:true,  status:"Active", isNew:true  },
+  { name:"Test  Academic b",      cat:"Academic",   owner:"Academic Affairs",       freq:"Quarterly", fmt:"Excel",      link:"#", lastUpdated:"2026-04-01", isLive:false, status:"Active", isNew:false },
+  { name:"Test  Academic c",      cat:"Academic",   owner:"Institutional Research", freq:"Quarterly", fmt:"Power BI",   link:"#", lastUpdated:"2026-03-15", isLive:true,  status:"Active", isNew:true  },
+  { name:"Test  Academic d",       cat:"Academic",   owner:"K-12 Partnerships",      freq:"Quarterly", fmt:"Power BI",   link:"#", lastUpdated:"2026-04-15", isLive:false, status:"Active", isNew:false },
+  { name:"Test  Academic e",      cat:"Academic",   owner:"Institutional Research", freq:"Semester",  fmt:"SharePoint", link:"#", lastUpdated:"2026-01-10", isLive:false, status:"Active", isNew:false },
+  { name:"Test Operations a",       cat:"Operations", owner:"Facilities Mgmt.",       freq:"Weekly",    fmt:"Teams",      link:"#", lastUpdated:"2026-06-01", isLive:true,  status:"Active", isNew:false },
+  { name:"Test Operations b",         cat:"Operations", owner:"IT Services",            freq:"Monthly",   fmt:"Teams",      link:"#", lastUpdated:"2026-05-31", isLive:true,  status:"Active", isNew:false },
+  { name:"Employee Roster",     cat:"HR",         owner:"Human Resources",        freq:"Monthly",   fmt:"Excel",      link:"#", lastUpdated:"2026-05-31", isLive:false, status:"Active", isNew:false },
+  { name:"Employee Turnover",      cat:"HR",         owner:"Human Resources",        freq:"On-demand", fmt:"Teams",      link:"#", lastUpdated:"2026-06-01", isLive:true,  status:"Active", isNew:true  },
+  { name:"Test HR ",   cat:"HR",         owner:"Human Resources",        freq:"Annual",    fmt:"SharePoint", link:"#", lastUpdated:"2026-01-15", isLive:false, status:"Active", isNew:false },
+  { name:"Test Compliance a",      cat:"Compliance", owner:"Legal & Compliance",     freq:"Quarterly", fmt:"SharePoint", link:"#", lastUpdated:"2026-04-01", isLive:false, status:"Active", isNew:false },
+  { name:"Test Compliance b",         cat:"Compliance", owner:"Institutional Research", freq:"Annual",    fmt:"Excel",      link:"#", lastUpdated:"2025-12-01", isLive:false, status:"Active", isNew:false },
+  { name:"Test Compliance c",   cat:"Compliance", owner:"Academic Affairs",       freq:"Annual",    fmt:"SharePoint", link:"#", lastUpdated:"2026-03-01", isLive:false, status:"Active", isNew:false },
 ];
 
-const CAT_ORDER  = ["Finance","Academic","Operations","HR","Compliance"];
+const CAT_ORDER  = ["Academic","Compliance","Finance","HR","Operations"];
 const CAT_LABELS = { Finance:"Finance", Academic:"Academic", Operations:"Operations", HR:"HR & Payroll", Compliance:"Compliance" };
 const CAT_COLOR  = { Finance:"#1a56a4", Academic:"#2d7a2d", Operations:"#a05c00", HR:"#8b2060", Compliance:"#5a3d9e" };
 
