@@ -288,8 +288,8 @@
       <div class="chip active" data-cat="All">All reports</div>
       <div class="chip" data-cat="Academic"><span class="chip-dot" style="background:#2d7a2d"></span>Academic</div>
       <div class="chip" data-cat="Compliance"><span class="chip-dot" style="background:#5a3d9e"></span>Compliance</div>
-      <div class="chip" data-cat="Finance"><span class="chip-dot" style="background:#1a56a4"></span>Finance</div>
-      <div class="chip" data-cat="HR"><span class="chip-dot" style="background:#8b2060"></span>HR &amp; Payroll</div>
+      <div class="chip" data-cat="Finance"><span class="chip-dot" style="background:#FFA500"></span>Finance</div>
+      <div class="chip" data-cat="HR"><span class="chip-dot" style="background:#1a56a4"></span>HR &amp; Payroll</div>
       <div class="chip" data-cat="Operations"><span class="chip-dot" style="background:#a05c00"></span>Operations</div>
     </div>
 
@@ -321,8 +321,8 @@ const REPORTS = [
   { name:"Test  Academic e",      cat:"Academic",   owner:"Institutional Research", freq:"Semester",  fmt:"SharePoint", link:"#", lastUpdated:"2026-01-10", isLive:false, status:"Active", isNew:false },
   { name:"Test Operations a",       cat:"Operations", owner:"Facilities Mgmt.",       freq:"Weekly",    fmt:"Teams",      link:"#", lastUpdated:"2026-06-01", isLive:true,  status:"Active", isNew:false },
   { name:"Test Operations b",         cat:"Operations", owner:"IT Services",            freq:"Monthly",   fmt:"Teams",      link:"#", lastUpdated:"2026-05-31", isLive:true,  status:"Active", isNew:false },
-  { name:"Employee Roster",     cat:"HR",         owner:"Human Resources",        freq:"Monthly",   fmt:"Excel",      link:"#", lastUpdated:"2026-05-31", isLive:false, status:"Active", isNew:true },
-  { name:"Employee Turnover",      cat:"HR",         owner:"Human Resources",        freq:"On-demand", fmt:"Teams",      link:"#", lastUpdated:"2026-06-01", isLive:false,  status:"Active", isNew:true  },
+  { name:"Employee Roster",     cat:"HR",         owner:"Human Resources",        freq:"Monthly",   fmt:"Power BI",      link:"#", lastUpdated:"2026-05-31", isLive:false, status:"Active", isNew:true },
+  { name:"Employee Turnover",      cat:"HR",         owner:"Human Resources",        freq:"On-demand", fmt:"Power BI",      link:"https://uofnebraska.sharepoint.com/:u:/r/sites/CEHSDatadock/Shared%20Documents/General/CEHS%20Employee%20Roster.pbix?csf=1&web=1&e=vbE8vh", lastUpdated:"2026-06-01", isLive:false,  status:"Active", isNew:true  },
   { name:"Test HR ",   cat:"HR",         owner:"Human Resources",        freq:"Annual",    fmt:"SharePoint", link:"#", lastUpdated:"2026-01-15", isLive:false, status:"Active", isNew:false },
   { name:"Test Compliance a",      cat:"Compliance", owner:"Legal & Compliance",     freq:"Quarterly", fmt:"SharePoint", link:"#", lastUpdated:"2026-04-01", isLive:false, status:"Active", isNew:false },
   { name:"Test Compliance b",         cat:"Compliance", owner:"Institutional Research", freq:"Annual",    fmt:"Excel",      link:"#", lastUpdated:"2025-12-01", isLive:false, status:"Active", isNew:false },
@@ -331,7 +331,7 @@ const REPORTS = [
 
 const CAT_ORDER  = ["Academic","Compliance","Finance","HR","Operations"];
 const CAT_LABELS = { Finance:"Finance", Academic:"Academic", Operations:"Operations", HR:"HR & Payroll", Compliance:"Compliance" };
-const CAT_COLOR  = { Finance:"#1a56a4", Academic:"#2d7a2d", Operations:"#a05c00", HR:"#1a56a4", Compliance:"#5a3d9e" };
+const CAT_COLOR  = { Finance:"#FFA500", Academic:"#2d7a2d", Operations:"#a05c00", HR:"#1a56a4", Compliance:"#5a3d9e" };
 
 let activeChip = "All";
 
